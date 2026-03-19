@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "rating":4.9,
+    "reviews":345,
+    "name": "Nike Air Max Style",
+    "price": 120,
+    "category": "Running",
+    "sizes": [38, 39, 40, 41, 42],
+    "stock": 25,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpCVs3LmOIoaGJG1hdyr26W5pk96SBc5hnNg&s",
+    "description": "Comfortable running sneaker with modern design."
+  },
+  {
+    "id": 2,
+     "rating":4.4,
+     "reviews":385,
+    "name": "Adidas Sport Runner",
+    "price": 110,
+    "category": "Sports",
+    "sizes": [39, 40, 41, 42, 43],
+    "stock": 18,
+    "image": "data:image/jpeg;base64,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",
+    "description": "Lightweight running shoe for everyday training."
+  },
+  {
+    "id": 3,
+     "rating":5,
+     "reviews":31,
+    "name": "Puma Street Sneaker",
+    "price": 95,
+    "category": "Casual",
+    "sizes": [38, 39, 40, 41],
+    "stock": 30,
+    "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77",
+    "description": "Stylish sneaker perfect for street fashion."
+  },
+  {
+    "id": 4,
+     "rating":4.9,
+     "reviews":325,
+    "name": "Classic White Sneaker",
+    "price": 80,
+    "category": "Casual",
+    "sizes": [38, 39, 40, 41, 42],
+    "stock": 20,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsMz-exyEGjv4zZbVLRyJFrjN2PB4AJXYmmw&s",
+    "description": "Minimal white sneaker for casual wear."
+  },
+  {
+    "id": 5,
+     "rating":4.9,
+     "reviews":385,
+    "name": "Black Running Shoe",
+    "price": 105,
+    "category": "Running",
+    "sizes": [39, 40, 41, 42],
+    "stock": 15,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRknBZf2HW5AYIWai21hlkzEtYLJhilydSvuA&s",
+    "description": "Durable running shoe with strong grip."
+  },
+  {
+    "id": 6,
+     "rating":4.7,
+     "reviews":852,
+    "name": "Nike Sport Pro",
+    "price": 130,
+    "category": "Sports",
+    "sizes": [40, 41, 42, 43],
+    "stock": 12,
+    "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2",
+    "description": "Premium sport shoe for athletes."
+  },
+  {
+    "id": 7,
+     "rating":4.9,
+     "reviews":38,
+    "name": "Urban Casual Sneaker",
+    "price": 85,
+    "category": "Lifestyle",
+    "sizes": [38, 39, 40, 41, 42],
+    "stock": 22,
+    "image": "https://images.unsplash.com/photo-1539185441755-769473a23570",
+    "description": "Casual sneaker for daily lifestyle."
+  },
+  {
+    "id": 8,
+     "rating":5,
+     "reviews":954,
+    "name": "Grey Training Shoe",
+    "price": 100,
+    "category": "Training",
+    "sizes": [39, 40, 41, 42, 43],
+    "stock": 17,
+    "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a",
+    "description": "Perfect training shoe for gym and running."
+  },
+  {
+    "id": 9,
+     "rating":4.9,
+     "reviews":345,
+    "name": "Modern Runner",
+    "price": 115,
+    "category": "Running",
+    "sizes": [40, 41, 42],
+    "stock": 14,
+    "image": "https://images.unsplash.com/photo-1552346154-21d32810aba3",
+    "description": "Modern design with breathable material."
+  },
+  {
+    "id": 10,
+     "rating":4.6,
+     "reviews":457,
+    "name": "Premium Sport Sneaker",
+    "price": 140,
+    "category": "Sports",
+    "sizes": [41, 42, 43, 44],
+    "stock": 10,
+    "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5",
+    "description": "High quality sneaker with premium comfort."
+  }
+]

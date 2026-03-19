@@ -1,0 +1,39 @@
+[debug] [2026-03-19T03:13:49.447Z] ----------------------------------------------------------------------
+[debug] [2026-03-19T03:13:49.448Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Miraz\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2026-03-19T03:13:49.449Z] CLI Version:   15.11.0
+[debug] [2026-03-19T03:13:49.449Z] Platform:      win32
+[debug] [2026-03-19T03:13:49.449Z] Node Version:  v24.12.0
+[debug] [2026-03-19T03:13:49.449Z] Time:          Thu Mar 19 2026 09:13:49 GMT+0600 (Bangladesh Standard Time)
+[debug] [2026-03-19T03:13:49.449Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  F:\demo-project\demo-2\ecomarce-demo2
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-03-19T03:13:52.037Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-19T03:13:52.037Z] > authorizing via signed-in user (mongodbatlas011@gmail.com)
+[debug] [2026-03-19T03:13:52.038Z] Checked if tokens are valid: true, expires at: 1773893602968
+[debug] [2026-03-19T03:13:52.038Z] Checked if tokens are valid: true, expires at: 1773893602968
+[debug] [2026-03-19T03:13:52.039Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dream-coaching-8f1c5 [none]
+[debug] [2026-03-19T03:13:52.784Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dream-coaching-8f1c5 403
+[debug] [2026-03-19T03:13:52.784Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dream-coaching-8f1c5 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-03-19T03:13:52.784Z] Request to https://firebase.googleapis.com/v1beta1/projects/dream-coaching-8f1c5 had HTTP Error: 403, The caller does not have permission
+[debug] [2026-03-19T03:13:52.951Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/dream-coaching-8f1c5 had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\Miraz\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\Miraz\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:333:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[error] 
+[error] Error: Failed to get Firebase project dream-coaching-8f1c5. Please make sure the project exists and your account has permission to access it.

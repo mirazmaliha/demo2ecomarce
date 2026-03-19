@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Rahim Uddin",
+    "image": "https://randomuser.me/api/portraits/men/32.jpg",
+    "rating": 5,
+    "review": "These shoes are extremely comfortable and stylish. Perfect for daily use!"
+  },
+  {
+    "id": 2,
+    "name": "Karim Hasan",
+    "image": "https://randomuser.me/api/portraits/men/45.jpg",
+    "rating": 4,
+    "review": "Good quality shoes at a reasonable price. Delivery was also very fast."
+  },
+  {
+    "id": 3,
+    "name": "Nusrat Jahan",
+    "image": "https://randomuser.me/api/portraits/women/65.jpg",
+    "rating": 5,
+    "review": "I love the design and the comfort level. Highly recommended!"
+  },
+  {
+    "id": 4,
+    "name": "Tanvir Ahmed",
+    "image": "https://randomuser.me/api/portraits/men/22.jpg",
+    "rating": 4,
+    "review": "Very durable shoes. I have been using them for weeks without any issue."
+  },
+  {
+    "id": 5,
+    "name": "Maliha Akter",
+    "image": "https://randomuser.me/api/portraits/women/44.jpg",
+    "rating": 5,
+    "review": "Amazing quality and super comfortable. I will definitely buy again!"
+  }
+]
