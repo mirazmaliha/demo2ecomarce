@@ -5,7 +5,7 @@ import { BsBag } from "react-icons/bs";
 import {  CartContext, themContext } from '../../../App';
 import { Link } from 'react-router-dom';
 
-function ShopChild({sho}) {
+function ShopChild({sho, setIsOpen, setCartCondi, cartCondi}) {
   const {name, price, category, sizes, stock, image, description, rating} = sho;
 
   const [like, setLike] = useState(false);
@@ -26,7 +26,17 @@ function ShopChild({sho}) {
        const filter = cart.find(fl => fl.id.toString() === pd.id.toString());
        if(!filter){
         setCart([...cart, pd])
+         setCartCondi("Added to cart")
+          setIsOpen(true)
+          setTimeout(()=> {
+             setIsOpen(false)
+          }, 1000)
        }else{
+        setCartCondi("Alredy added to cart")
+        setIsOpen(true)
+         setTimeout(()=> {
+             setIsOpen(false)
+          }, 1000)
         return
        }
       }
@@ -36,7 +46,7 @@ function ShopChild({sho}) {
     
    <Link className='cursor-pointer' to={`/product/${sho.id}`}>
     <img onClick={()=> handleProduct(sho.id)}
-      className='w-full z-30 transition-all duration-300 ease-in-out group-hover:scale-110 h-56'
+      className='w-full z-30 transition-all duration-300 ease-in-out group-hover:scale-110 aspect-[4/3]'
       src={image}
       alt=""
     />
@@ -45,7 +55,7 @@ function ShopChild({sho}) {
     <div className='absolute pointer-events-none flex justify-center items-end inset-0 z-50'>
       <div className='w-full flex opacity-0 translate-y-6 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-0'>
         <button onClick={()=>handleCart(sho)} className='w-full mb-2 pointer-events-auto gap-2 mx-1 flex items-center justify-center py-2 bg-white text-black font-bold rounded-md'>
-         <BsBag /> Add to cart
+         <BsBag /> <span className='sm:flex hidden'>Add to cart</span>
         </button>
         <button onClick={handleLike} className='py-2 px-2 pointer-events-auto mb-2 rounded-md me-2 bg-white'>
          { !like ? <FcLikePlaceholder /> :

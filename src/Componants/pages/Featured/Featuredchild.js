@@ -5,7 +5,7 @@ import { BsBag } from "react-icons/bs";
 import { CartContext, themContext } from '../../../App';
 import { Link } from 'react-router-dom';
 
-function Featuredchild({sho}) {
+function Featuredchild({sho, setIsOpen, setCartCondi, cartCondi}) {
   const {name, price, category, sizes, stock, image, description, rating} = sho;
 
   const [like, setLike] = useState(false);
@@ -26,7 +26,17 @@ function Featuredchild({sho}) {
          const filter = cart.find(fl => fl.id.toString() === pd.id.toString());
          if(!filter){
           setCart([...cart, pd])
+           setCartCondi("Added to cart")
+          setIsOpen(true)
+          setTimeout(()=> {
+             setIsOpen(false)
+          }, 1000)
          }else{
+          setCartCondi("Alredy added to cart")
+        setIsOpen(true)
+         setTimeout(()=> {
+             setIsOpen(false)
+          }, 1000)
           return
          }
         }

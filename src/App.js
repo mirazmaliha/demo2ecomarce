@@ -26,7 +26,7 @@ function App() {
       <themContext.Provider value={[them, setThem]}>
          <CartContext.Provider value={[cart, setCart]}>
           <Navbar/>
-       <div className={`min-h-screen ${them ? 'bg-white' : 'bg-black'}`}>
+       <div className={`min-h-screen  ${them ? 'bg-white' : 'bg-black'}`}>
         <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/product/:id' element={<ProductDetails/>} />

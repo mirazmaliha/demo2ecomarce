@@ -68,26 +68,24 @@ function Navbar() {
         </div>
        </div>
        <div className='md:hidden relative'>
-          <div className='grid z-40 grid-cols-3 w-full mx-5 justify-between'>
-            <div>
+          <div className='grid z-40 grid-cols-2 w-full  justify-between'>
+            <div className='flex justify-between'>
               <p className='px-3 w-fit py-3 border-white border-2 rounded-lg  active:border-orange-500' onClick={handleBar}>{!bar ? <FaBars /> : <IoClose />}</p>
+              <p className='  text-[12px]'> Shopping Hub</p>
             </div>
-            <div className='h-ful flex justify-center items-center w-full'>
-                 <p className='  text-[12px]'> Shopping Hub</p>
-            </div>
-            <div className='flex w-full justify-center'>
-                <ul className='gap-1 flex'>
+            <div className='flex w-full  justify-center'>
+                <ul className=' flex'>
             <li onClick={handleThem} className='hover:bg-slate-600/20 px-3 py-3 rounded-lg transition-all duration-200 cursor-pointer'>
             {!them ? <LuSun /> : <GoMoon />}
             </li>
              <li className='hover:bg-slate-600/20 px-3 py-3 rounded-lg transition-all duration-200 cursor-pointer'>
             <GiSelfLove />
             </li>
-            <li className='hover:bg-slate-600/20 relative px-3 py-3 rounded-lg transition-all duration-200 cursor-pointer'>
+            <li className='hover:bg-slate-600/20 relative px-2 py-2 rounded-lg transition-all duration-200 cursor-pointer'>
             <div>
-               <div>
+               <div >
                  <IoBag />
-                  <div className='absolute top-[-17px] right-[-10px] flex justify-center items-center bg-orange-500 w-7 h-7 rounded-full font-bold text-white'>
+                  <div className='absolute top-[-17px] right-[-10px] flex justify-center items-center bg-orange-500 w-5 h-5 rounded-full font-bold text-white'>
                  <p>{cart.length}</p>
                </div>
                </div>
@@ -98,12 +96,12 @@ function Navbar() {
             </div>
           </div>
 
-         <div className={` w-[100%] z-10 absolute right-0 h-fit top-full bg-white transition-all border-t-[1px] border-gray-200 duration-300 ease-in-out ${bar  ? "translate-y-0  opacity-100 pointer-events-auto"  : "-translate-y-full opacity-0  pointer-events-none"}`} >
+         <div className={` w-full z-10 absolute right-0 h-fit top-full bg-white transition-all border-t-[1px] border-gray-200 duration-300 ease-in-out ${bar  ? "translate-y-0  opacity-100 pointer-events-auto"  : "-translate-y-full opacity-0  pointer-events-none"}`} >
           <ul className='mx-6 py-10'>
-            <li className=''>Shop</li>
-            <li className='my-2'>Categories</li>
-            <li className=''>New Arrivals</li>
-            <li className='my-2'>About</li>
+            <li onClick={()=> setbar(false)}><Link to='/shop'>Shop</Link></li>
+            <li onClick={()=> setbar(false)} className='my-2'><Link to='/categories'>Categories</Link></li>
+            <li onClick={()=> setbar(false)} className=''><Link to='/newarrivals'>New Arrivals</Link></li>
+            <li onClick={()=> setbar(false)} className='my-2'><Link to='/about'>About</Link></li>
           </ul>
          </div>
        </div>

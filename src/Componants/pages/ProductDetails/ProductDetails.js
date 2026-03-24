@@ -44,7 +44,7 @@ function ProductDetails() {
       }, [product])
   return (
    <div className={`flex font-bold ${them? 'bg-white' : 'bg-black text-white'} justify-center`}>
-     <div className='lg:w-[70%] pt-10 md:w-[95%]'>
+     <div className='lg:w-[70%] px-4  pt-10 md:w-[95%]'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
              <div>
                 <div className='w-full overflow-hidden aspect-[4/3] md:h-[500px]'>
@@ -89,7 +89,7 @@ function ProductDetails() {
           <p className='px-4 text-orange-500 py-4 rounded-lg w-fit '><FaShippingFast /></p>
         </div>
         <div>
-           <p className={`${them ? 'text-gray-600' : 'text-gray-100'}`}>Free Shipping</p>
+           <p className={`${them ? 'text-gray-600' : 'text-gray-100'} sm:text-[15px] text-[13px] `}>Free Shipping</p>
            <p className='font-thin text-gray-500'>On orders over $75 </p>
         </div>
       </div>
@@ -98,7 +98,7 @@ function ProductDetails() {
           <p className='px-4 text-orange-500 py-4 rounded-lg w-fit '><FaRetweet /></p>
         </div>
         <div>
-           <p className={`${them ? 'text-gray-600' : 'text-gray-100'}`}>60-Day Returns</p>
+           <p className={` ${them ? 'text-gray-600' : 'text-gray-100'} sm:text-[15px] text-[13px]`}>60-Day Returns</p>
            <p className='font-thin text-gray-500'>Try it, love it </p>
         </div>
       </div>

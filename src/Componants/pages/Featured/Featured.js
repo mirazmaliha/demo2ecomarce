@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import sho from '../../../Json/Sho.json';
 import Featuredchild from './Featuredchild';
 import { FaShippingFast } from "react-icons/fa";
@@ -6,8 +6,17 @@ import { FaRetweet } from "react-icons/fa";
 import { MdBalance } from "react-icons/md";
 import { IoCloudDoneSharp } from "react-icons/io5";
 import { themContext } from '../../../App';
+import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import mark from '../../../image/mark.png'
 
 function Featured() {
+   let [isOpen, setIsOpen] = useState(false);
+      const [cardCondi, setCartCondi] = useState("");
+  
+    async function handleDeactivate() {
+      await fetch('/deactivate-account', { method: 'POST' })
+      setIsOpen(false)
+    }
 
    const [them, setThem] = useContext(themContext)
   return (
@@ -19,7 +28,7 @@ function Featured() {
     </div>
      <div className='grid px-4 mt-7 gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
      {
-        sho.map(sh => <Featuredchild key={sh.price} sho={sh} />)
+        sho.map(sh => <Featuredchild key={sh.price} setIsOpen={setIsOpen} cardCondi={cardCondi} setCartCondi={setCartCondi} sho={sh} />)
      }
     </div>
    <div>
@@ -63,6 +72,22 @@ function Featured() {
     </div>
    </div>
     </div>
+     <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
+      
+      {/* Overlay */}
+      <div className="fixed inset-0 bg-black/40" aria-hidden="true" />
+    
+      {/* Modal center */}
+      <div className="fixed inset-0 flex items-center justify-center">
+        <DialogPanel className="bg-white p-6 rounded-xl w-96">
+    
+          <div className='flex justify-center items-center gap-2'>
+            <img className='w-10 aspect-square' src={mark} alt="" />
+            <p className='font-bold font-poppins'>{cardCondi}</p>
+          </div>
+        </DialogPanel>
+      </div>
+    </Dialog>
    </div>
   )
 }
